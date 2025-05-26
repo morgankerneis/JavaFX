@@ -8,6 +8,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Priority;
+import javafx.scene.layout.Region;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -29,6 +31,9 @@ public class App extends Application {
         VBox buttonList = new VBox(10, copy, erase, closeWindow);
 
         GridPane grid = new GridPane();
+
+        grid.setGridLinesVisible(true);
+
         grid.add(userInput, 0, 0);
         grid.add(userInpuTextField, 1, 0);
         grid.add(inputCopy, 0, 1);
@@ -59,6 +64,7 @@ public class App extends Application {
 
         closeWindow.setOnAction(e -> {
             Platform.exit();
+            // stage.close();
         });
 
         // Code output
